@@ -1,0 +1,8 @@
+{
+  "buoy_id": "B-001",
+  "lat": 10.000,
+  "long": 10.000,
+  "pH": 7,
+  "alt": 1,
+  "image_link": "Link for firebase storage bucket"
+}
