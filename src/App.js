@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
+
 import './App.css';
-import TemporaryDrawer from "./Toolbar/Toolbar";
+import TemporaryDrawer from "./components/Toolbar/Toolbar";
+import About from "./pages/About/About";
 
 class App extends Component {
   render() {
@@ -10,6 +11,10 @@ class App extends Component {
         <header className="App-header">
           <TemporaryDrawer/>
         </header>
+
+        <main>
+            <About/>
+        </main>
       </div>
     );
   }
