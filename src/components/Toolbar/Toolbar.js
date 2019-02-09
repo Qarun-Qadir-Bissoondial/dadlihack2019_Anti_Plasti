@@ -10,17 +10,12 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
+import Link from "react-router-dom/es/Link";
 
 const styles = {
-    list: {
-        width: 250,
-    },
-    fullList: {
-        width: 'auto',
-    },
-    root: {
-        flexGrow: 1,
-    },
+    list: { width: 250, },
+    fullList: { width: 'auto', },
+    root: { flexGrow: 1, },
     menuButton: {
         marginLeft: -12,
         marginRight: 5,
@@ -46,12 +41,12 @@ class TemporaryDrawer extends React.Component {
             <div className={classes.list}>
                 <List>
                     <ListItem button key="Home">
-                        <Icon>star</Icon>
-                        <ListItemText primary="Home" />
+                        <Icon style={{marginRight: 20, marginBottom: 2}}>star</Icon>
+                        <Link style={{textDecoration: "none"}} to={"/"}><ListItemText primary="Home" /></Link>
                     </ListItem>
                     <ListItem button key="About">
-                        <Icon>info</Icon>
-                        <ListItemText primary="About" />
+                        <Icon style={{marginRight: 20, marginBottom: 2}} >info</Icon>
+                        <Link style={{textDecoration: "none"}}  to={"/about"}><ListItemText primary="About" /></Link>
                     </ListItem>
                 </List>
             </div>
