@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import {withStyles} from "@material-ui/core";
-import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
 import SimpleHereMap from "../../components/SimpleHereMap/SimpleHereMap";
 
@@ -30,22 +29,7 @@ class Home extends React.Component {
                     culpa qui officia deserunt mollit anim id est laborum.
                 </p>
 
-                <Divider />
-
-
-                {/*<SimpleHereMap/>*/}
-
-                <Divider />
-
-
-
-                <Typography style={{marginTop: 10 }} component="h2" variant="display2" gutterBottom>
-                    Buoy Info
-                </Typography>
-
-
-
-
+                <SimpleHereMap/>
 
             </div>
         )

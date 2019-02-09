@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import {withStyles} from "@material-ui/core";
+import { withStyles} from "@material-ui/core";
+import Divider from "@material-ui/core/Divider"
+import Typography from "@material-ui/core/Typography";
+import BuoyCard from "../BuoyCard/BuoyCard";
 
 const styles = {
 
@@ -30,8 +33,14 @@ class SimpleHereMap extends React.Component {
                 lng: tt_long,
             },
             zoom: zoom,
-            // theme: props.theme,
-            // style: props.style,
+            infoPresent: false,
+            card: {
+                title: 'Buoy Title',
+                lat: 10.1234,
+                long: -61.1234,
+                pH: 7,
+                altitude: 10
+            }
         }
     }
 
@@ -56,7 +65,30 @@ class SimpleHereMap extends React.Component {
             zoom: this.state.zoom,
         });
 
+        var svgMarkup = '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">' +
+            '<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>' +
+            '<path d="M0 0h24v24H0z" fill="none"/>' +
+            '</svg>';
 
+        const group = new window.H.map.Group();
+
+        const marker_icon = new window.H.map.Icon(svgMarkup);
+        const marker_n = new window.H.map.Marker({lat: 10.81, lng: -61.3339669}, {icon: marker_icon});
+        const marker_s = new window.H.map.Marker({lat: 10.0, lng: -61.3339669}, {icon: marker_icon});
+        const marker_e = new window.H.map.Marker({lat: 10.4398967, lng: -61.5339669}, {icon: marker_icon});
+        const marker_w = new window.H.map.Marker({lat: 10.4398967, lng: -60.9739669}, {icon: marker_icon});
+
+        group.addObject(marker_n);
+        group.addObject(marker_s);
+        group.addObject(marker_e);
+        group.addObject(marker_w);
+
+        this.map.addObject(group);
+
+        group.addEventListener('tap', (event) => {
+            console.log(event.target.getPosition());
+            this.setState({infoPresent: true});
+        });
 
         var events = new window.H.mapevents.MapEvents(this.map);
         // eslint-disable-next-line
@@ -78,7 +110,22 @@ class SimpleHereMap extends React.Component {
 
     render() {
         return (
-            <div id="here-map" style={{width: '100%', height: '500px', background: 'grey' }} />
+            <div>
+                <Divider/>
+
+                <div id="here-map" style={{width: '100%', height: '500px', background: 'grey' }} > </div>
+
+                <Divider style={{marginTop: 15}}/>
+
+                <Typography style={{marginTop: 10 }} component="h2" variant="display2" gutterBottom>
+                    Buoy Info
+                </Typography>
+
+                <BuoyCard data={this.state.card} infoPresent={this.state.infoPresent}/>
+
+            </div>
+
+
         );
     }
 }
