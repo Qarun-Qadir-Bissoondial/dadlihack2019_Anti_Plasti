@@ -71,8 +71,18 @@ class SimpleHereMap extends React.Component {
             '</svg>';
 
         const group = new window.H.map.Group();
-
         const marker_icon = new window.H.map.Icon(svgMarkup);
+
+        // The following markers are dummy data
+        // The data from firebase will be used to create these objects
+        // Only the lat and long from the firebase object is needed to create the marker, but all the
+        // other info is needed to create a Buoy Object
+
+        // 1. Get a collection of Buoy objects from firebase
+        // 2. Create a marker for each fetched Buoy Object using the lat and long
+        // 3. Create a mapping between the Buoy Object and the marker that was created for it
+        // (continued on the group.addEventListener function)
+
         const marker_n = new window.H.map.Marker({lat: 10.81, lng: -61.3339669}, {icon: marker_icon});
         const marker_s = new window.H.map.Marker({lat: 10.0, lng: -61.3339669}, {icon: marker_icon});
         const marker_e = new window.H.map.Marker({lat: 10.4398967, lng: -61.5339669}, {icon: marker_icon});
@@ -86,7 +96,15 @@ class SimpleHereMap extends React.Component {
         this.map.addObject(group);
 
         group.addEventListener('tap', (event) => {
-            console.log(event.target.getPosition());
+            console.log(event.target); // event.target is the marker that was clicked on
+
+            // In addition to infoPresent being set to true in the state, the card object in the state also
+            // has to be updated. The marker that is clicked on will correspond to a Buoy Object. The data
+            // from this Buoy Object will be used to set the state. This is automatically passed to the JSX below.
+
+            // 1. When a marker is clicked, use the mapping from 3 to determine which Buoy Object it corresponds to
+            // 2. Pass the Buoy Object from 4 into the card state
+            // this.setState({infoPresent: true, card: this_buoy_object});
             this.setState({infoPresent: true});
         });
 
@@ -100,11 +118,11 @@ class SimpleHereMap extends React.Component {
 
     re_render() {
         window.addEventListener('resize', () => {
-                this.map.getViewPort().resize();
-                this.setState({
-                    zoom: this.set_zoom()
-                });
-                // this.state.zoom = this.set_zoom();
+            this.map.getViewPort().resize();
+            this.setState({
+                zoom: this.set_zoom()
+            });
+            // this.state.zoom = this.set_zoom();
         })
     }
 

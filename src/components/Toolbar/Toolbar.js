@@ -40,14 +40,20 @@ class TemporaryDrawer extends React.Component {
         const sideList = (
             <div className={classes.list}>
                 <List>
-                    <ListItem button key="Home">
-                        <Icon style={{marginRight: 20, marginBottom: 2}}>star</Icon>
-                        <Link style={{textDecoration: "none"}} to={"/"}><ListItemText primary="Home" /></Link>
-                    </ListItem>
-                    <ListItem button key="About">
-                        <Icon style={{marginRight: 20, marginBottom: 2}} >info</Icon>
-                        <Link style={{textDecoration: "none"}}  to={"/about"}><ListItemText primary="About" /></Link>
-                    </ListItem>
+                    <Link style={{textDecoration: "none"}} to={"/"}>
+                        <ListItem button key="Home">
+                            <Icon style={{ marginBottom: 2, color: 'black'}}>star</Icon>
+                            <ListItemText primary="Home" />
+                        </ListItem>
+                    </Link>
+
+                    <Link style={{textDecoration: "none"}}  to={"/about"}>
+                        <ListItem button key="About">
+                            <Icon style={{ marginBottom: 2, color: 'black'}} >info</Icon>
+                            <ListItemText primary="About" />
+                        </ListItem>
+                    </Link>
+
                 </List>
             </div>
         );
