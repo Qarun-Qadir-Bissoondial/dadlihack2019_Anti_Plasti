@@ -22,11 +22,13 @@ class Home extends React.Component {
                     Home
                 </Typography>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                Climate change resilience through computer vision and cloud computing, to reduce the devastating effects of volatile weather and oceanic refuse.
+
+
+                </p>
+
+                <p>
+                    Click on a Buoy to view plastics detected and the weather forecast for that location.
                 </p>
 
                 <SimpleHereMap/>

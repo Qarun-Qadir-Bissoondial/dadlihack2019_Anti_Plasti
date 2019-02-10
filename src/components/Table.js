@@ -21,6 +21,34 @@ const Table = (props) => {
           <td>{props.humidity}</td>
           <td>{props.windspeed}</td>
         </tr>
+        <tr>
+          <td>{props.date}</td>
+          <td>Clear Sky</td>
+          <td>{props.temperature}</td>
+          <td>{props.humidity}</td>
+          <td>{props.windspeed}</td>
+        </tr>
+        <tr>
+          <td>{props.date}</td>
+          <td>Clear Sky</td>
+          <td>{props.temperature}</td>
+          <td>{props.humidity}</td>
+          <td>{props.windspeed}</td>
+        </tr>
+        <tr>
+          <td>{props.date}</td>
+          <td>Cloudy</td>
+          <td>{props.temperature}</td>
+          <td>{props.humidity}</td>
+          <td>{props.windspeed}</td>
+        </tr>
+        <tr>
+          <td>{props.date}</td>
+          <td>Sunny</td>
+          <td>{props.temperature}</td>
+          <td>{props.humidity}</td>
+          <td>{props.windspeed}</td>
+        </tr>
         {/* <tr>
           <td>2</td>
           <td>Jacob</td>
