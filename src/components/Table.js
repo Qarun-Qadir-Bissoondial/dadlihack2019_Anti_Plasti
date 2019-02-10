@@ -1,7 +1,7 @@
 import React from 'react';
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 
-const Table = props => {
+const Table = (props) => {
   return (
     <MDBTable hover>
       <MDBTableHead>
@@ -15,11 +15,11 @@ const Table = props => {
       </MDBTableHead>
       <MDBTableBody>
         <tr>
-          <td>{this.props.date}</td>
-          <td>{this.props.description}</td>
-          <td>{this.props.temperature}</td>
-          <td>{this.props.humidity}</td>
-          <td>{this.props.windspeed}</td>
+          <td>{props.date}</td>
+          <td>{props.description}</td>
+          <td>{props.temperature}</td>
+          <td>{props.humidity}</td>
+          <td>{props.windspeed}</td>
         </tr>
         {/* <tr>
           <td>2</td>

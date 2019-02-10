@@ -25,6 +25,8 @@ class ModalInfo extends React.Component {
             error: undefined
             // successMsg: "",
         };
+
+        this.getweather = this.getweather.bind(this);
     }
 
     toggle = () => {
