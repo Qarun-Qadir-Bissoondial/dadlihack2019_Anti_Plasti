@@ -53,19 +53,11 @@ class ModalInfo extends React.Component {
         render(){
             return (
                 <MDBContainer>
-
-                    {/* <MDBBtn onClick={this.submit.bind(this)}> More Info </MDBBtn> */}
                     <div onClick={this.getweather}>
-
-                    {/* {this.getweather} */}
-
                     <MDBBtn onClick={this.toggle}> More Info</MDBBtn>
-                    {/* {this.getweather} */}
                     <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
                         <MDBModalHeader toggle={this.toggle}>Weather Forecast for the next 5 Days</MDBModalHeader>
-                        {/* {this.getweather()} */}
                         <MDBModalBody>
-                            {/* <Button getweather={this.getweather}/>  */}
                             <Table
                                 date={this.state.date}
                                 description={this.state.description}
@@ -82,8 +74,6 @@ class ModalInfo extends React.Component {
                     </div>
                     
                     </MDBContainer>
-                    
-
             );
         }
       };
