@@ -14,36 +14,43 @@ const Table = (props) => {
         </tr>
       </MDBTableHead>
       <MDBTableBody>
-        <tr>
+        {/* <tr>
           <td>{props.date}</td>
           <td>{props.description}</td>
           <td>{props.temperature}</td>
           <td>{props.humidity}</td>
           <td>{props.windspeed}</td>
+        </tr> */}
+        <tr>
+          <td>2019-02-10 15:00:00</td>
+          <td>Cloudy</td>
+          <td>31.0</td>
+          <td>100</td>
+          <td>213.008</td>
         </tr>
         <tr>
-          <td>2019-02-10 16:00:00</td>
+          <td>2019-02-11 16:00:00</td>
           <td>Clear Sky</td>
           <td>29.0</td>
           <td>100</td>
           <td>218.005</td>
         </tr>
         <tr>
-          <td>2019-02-10 19:00:00</td>
+          <td>2019-02-12 19:00:00</td>
           <td>Clear Sky</td>
           <td>33.0</td>
           <td>97</td>
           <td>220.002</td>
         </tr>
         <tr>
-          <td>2019-02-10 15:00:00</td>
+          <td>2019-02-13 15:00:00</td>
           <td>Cloudy</td>
           <td>32.0</td>
           <td>99</td>
           <td>210.006</td>
         </tr>
         <tr>
-          <td>2019-02-10 17:00:00</td>
+          <td>2019-02-14 17:00:00</td>
           <td>Sunny</td>
           <td>32.0</td>
           <td>100</td>
