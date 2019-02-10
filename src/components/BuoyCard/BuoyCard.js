@@ -1,5 +1,6 @@
 import './BuoyCard.css';
 import React from 'react';
+import ModalInfo from '../modal/ModalInfo';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -18,6 +19,19 @@ class BuoyCard extends React.Component {
 
     constructor(props) {
         super(props);
+        
+        this.state = {
+            modal: {
+                modal: false,
+                // title: props.title,
+                date: undefined,
+                description: undefined,
+                temperature: undefined,
+                humidity: undefined,
+                windspeed: undefined,
+                error: undefined,
+            }
+        }
     }
 
     render(){
@@ -51,9 +65,14 @@ class BuoyCard extends React.Component {
 
                 </CardContent>
                 <CardActions style={{justifyContent: 'center'}}>
+                    {/* <Button id = "toggleBtn" color="info" onClick={this.toggle}>Learn More</Button> */}
                     <Button size="small">Learn More</Button>
                 </CardActions>
+
+                <ModalInfo data={this.state.modal}/>
             </Card>
+
+            
         )
     }
 
