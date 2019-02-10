@@ -2,12 +2,18 @@ import React from 'react';
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import Button from "@material-ui/core/Button";
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardActionArea from '@material-ui/core/CardActionArea';
 
 class About extends React.Component {
 
     render() {
         return (
             <div>
+                <Card>
+                <CardActionArea>
+                <CardContent>
                 <div style={{textAlign: 'center'}}>
                     <Typography variant="display1"> About Anti-Plasti </Typography>
                     <p>
@@ -17,6 +23,7 @@ class About extends React.Component {
 
                 <Divider/>
 
+                
                 <p style={{textAlign: 'center', marginTop: 10}}>
                     <img src="/img/1.jpg" className="z-depth-1 img-fluid" alt="Sample avatar"/>
                 </p>
@@ -30,9 +37,12 @@ class About extends React.Component {
                         We aim to have an all-in-one cloud web app solution that detects plastics out in the ocean which will lead to the eradication of plastics, as well as weather forecasting to warn citizens of upcoming storms, hurricanes and bad weather. 
                     </p>
                 </div>
+                </CardContent>
+                </CardActionArea>
+                </Card>
 
                 <Divider/>
-
+                <Card>
                 <div style={{textAlign: 'center', marginTop: 10}}>
                     <Typography variant="display1"> We need your help!</Typography>
                     <p>
@@ -50,6 +60,7 @@ class About extends React.Component {
                         Check out our code here :D
                     </Button>
                 </div>
+                </Card>
             </div>
         );
     }
