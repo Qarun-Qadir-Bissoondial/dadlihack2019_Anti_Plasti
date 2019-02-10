@@ -15,7 +15,7 @@ class About extends React.Component {
                 <CardActionArea>
                 <CardContent>
                 <div style={{textAlign: 'center'}}>
-                    <Typography variant="display1"> About Anti-Plasti </Typography>
+                    <Typography variant="display1">Anti-Plasti </Typography>
                     <p>
                         Solving world hunger one step at a time.
                     </p>
@@ -42,7 +42,8 @@ class About extends React.Component {
                 </Card>
 
                 <Divider/>
-                <Card>
+
+                {/* <Card> */}
                 <div style={{textAlign: 'center', marginTop: 10}}>
                     <Typography variant="display1"> We need your help!</Typography>
                     <p>
@@ -60,7 +61,7 @@ class About extends React.Component {
                         Check out our code here :D
                     </Button>
                 </div>
-                </Card>
+                {/* </Card> */}
             </div>
         );
     }

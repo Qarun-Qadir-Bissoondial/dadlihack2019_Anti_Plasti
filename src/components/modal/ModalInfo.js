@@ -51,6 +51,7 @@ class ModalInfo extends React.Component {
     
         render(){
             return (
+                <div className="container-fluid">
                 <MDBContainer>
                     <div onClick={this.getweather}>
                     <MDBBtn onClick={this.toggle}> More Info</MDBBtn>
@@ -73,6 +74,7 @@ class ModalInfo extends React.Component {
                     </div>
                     
                     </MDBContainer>
+                    </div>
             );
         }
       };
