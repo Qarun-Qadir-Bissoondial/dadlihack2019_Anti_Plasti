@@ -54,6 +54,13 @@ class TemporaryDrawer extends React.Component {
                         </ListItem>
                     </Link>
 
+                    <Link style={{textDecoration: "none"}}  to={"/support"}>
+                        <ListItem button key="Support">
+                            <Icon style={{ marginBottom: 2, color: 'black'}} >info</Icon>
+                            <ListItemText primary="Support" />
+                        </ListItem>
+                    </Link>
+
                 </List>
             </div>
         );
