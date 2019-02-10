@@ -4,6 +4,7 @@ import { withStyles} from "@material-ui/core";
 import Divider from "@material-ui/core/Divider"
 import Typography from "@material-ui/core/Typography";
 import BuoyCard from "../BuoyCard/BuoyCard";
+import FirebaseInstance from "../Firebase/Firebase";
 
 const styles = {
 
@@ -15,6 +16,8 @@ const tt_lat = 10.3927881;
 const tt_long = -61.3339669;
 
 class SimpleHereMap extends React.Component {
+
+    app = new FirebaseInstance();
 
     constructor(props) {
         super(props);
@@ -38,8 +41,6 @@ class SimpleHereMap extends React.Component {
                 title: 'Buoy Title',
                 lat: 10.1234,
                 long: -61.1234,
-                pH: 7,
-                altitude: 10
             }
         }
     }
@@ -85,8 +86,8 @@ class SimpleHereMap extends React.Component {
 
         const marker_n = new window.H.map.Marker({lat: 10.81, lng: -61.3339669}, {icon: marker_icon});
         const marker_s = new window.H.map.Marker({lat: 10.0, lng: -61.3339669}, {icon: marker_icon});
-        const marker_e = new window.H.map.Marker({lat: 10.4398967, lng: -61.5339669}, {icon: marker_icon});
-        const marker_w = new window.H.map.Marker({lat: 10.4398967, lng: -60.9739669}, {icon: marker_icon});
+        const marker_w = new window.H.map.Marker({lat: 10.4398967, lng: -61.5339669}, {icon: marker_icon});
+        const marker_e = new window.H.map.Marker({lat: 10.4398967, lng: -60.9739669}, {icon: marker_icon});
 
         group.addObject(marker_n);
         group.addObject(marker_s);
@@ -94,6 +95,23 @@ class SimpleHereMap extends React.Component {
         group.addObject(marker_w);
 
         this.map.addObject(group);
+
+        // this.app.get_db().ref('dummy/B-E-001').set({
+        //     buoy_id: 'B-E-001',
+        //     lat: 10.4398967, lng: -60.9739669,
+        //     image_link: "none-yet"
+        // }).then(() => {
+        //     console.log('written');
+        // });
+
+        // "buoy_id": {
+        //     "buoy_id": "B-001",
+        //         "lat": 10.000,
+        //         "long": 10.000,
+        //         "pH": 7,
+        //         "alt": 1,
+        //         "image_link": "Link for firebase storage bucket"
+        // }
 
         group.addEventListener('tap', (event) => {
             console.log(event.target); // event.target is the marker that was clicked on

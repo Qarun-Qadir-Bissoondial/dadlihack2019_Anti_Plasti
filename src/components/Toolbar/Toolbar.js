@@ -11,6 +11,8 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import Link from "react-router-dom/es/Link";
+import Button from "@material-ui/core/Button";
+import Divider from "@material-ui/core/Divider";
 
 const styles = {
     list: { width: 250, },
@@ -34,11 +36,24 @@ class TemporaryDrawer extends React.Component {
         });
     };
 
+    forceReload() { window.location.reload(true); }
+
     render() {
         const { classes } = this.props;
 
         const sideList = (
             <div className={classes.list}>
+                <div className="nav_info" style={{paddingTop: 15, paddingBottom: 15}}>
+                    <Typography variant="display1">
+                        Anti-Plasti
+                    </Typography>
+                    <Typography variant="caption">
+                        v1.0.0
+                    </Typography>
+                </div>
+
+                <Divider/>
+
                 <List>
                     <Link style={{textDecoration: "none"}} to={"/"}>
                         <ListItem button key="Home">
@@ -55,6 +70,13 @@ class TemporaryDrawer extends React.Component {
                     </Link>
 
                 </List>
+                <Divider/>
+                <Typography style={{margin: 10}} variant="body1">
+                    Page not working as it should? Click below to receive the latest version of the web page (this
+                    will clear your cache for this page).
+                </Typography>
+                <Button onClick = {this.forceReload}>Force Refresh</Button>
+                <Divider/>
             </div>
         );
 
@@ -72,7 +94,7 @@ class TemporaryDrawer extends React.Component {
                     </Toolbar>
                 </AppBar>
 
-                <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
+                <Drawer style={{textAlign: 'center'}} open={this.state.left} onClose={this.toggleDrawer('left', false)}>
                     <div
                         tabIndex={0}
                         role="button"

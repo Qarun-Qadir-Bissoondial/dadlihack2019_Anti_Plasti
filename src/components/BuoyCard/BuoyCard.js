@@ -17,9 +17,7 @@ const styles = {
 class BuoyCard extends React.Component {
 
     constructor(props) {
-        console.log(props);
         super(props);
-
     }
 
     render(){
@@ -44,13 +42,6 @@ class BuoyCard extends React.Component {
                     <div className="data">
                         <Button>Latitude: {this.props.data.lat} </Button>
                         <Button>Longitude: {this.props.data.long} </Button>
-                    </div>
-
-                    <Divider/>
-
-                    <div className="data">
-                        <Button>pH:<br/> {this.props.data.pH}</Button>
-                        <Button>Altitude: <br/> {this.props.data.altitude}</Button>
                     </div>
 
                     <Divider/>

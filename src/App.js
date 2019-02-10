@@ -22,7 +22,7 @@ class App extends Component {
     }
 
     update() {
-        window.reload(true);
+        window.location.reload(true);
     }
 
     render() {
