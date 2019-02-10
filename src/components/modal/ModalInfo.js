@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from "../button"
 import Table from "../Table"
 import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
 // import FirebaseInstance from "../Firebase/Firebase";
@@ -15,7 +14,6 @@ class ModalInfo extends React.Component {
 
         this.state = {
             modal: false,
-            // title: props.title,
             date: new Date().toISOString().substring(0, 23),
             description: undefined,
             temperature: undefined,
