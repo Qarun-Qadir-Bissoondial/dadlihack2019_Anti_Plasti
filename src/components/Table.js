@@ -22,32 +22,32 @@ const Table = (props) => {
           <td>{props.windspeed}</td>
         </tr>
         <tr>
-          <td>{props.date}</td>
+          <td>2019-02-10 16:00:00</td>
           <td>Clear Sky</td>
-          <td>{props.temperature}</td>
-          <td>{props.humidity}</td>
-          <td>{props.windspeed}</td>
+          <td>29.0</td>
+          <td>100</td>
+          <td>218.005</td>
         </tr>
         <tr>
-          <td>{props.date}</td>
+          <td>2019-02-10 19:00:00</td>
           <td>Clear Sky</td>
-          <td>{props.temperature}</td>
-          <td>{props.humidity}</td>
-          <td>{props.windspeed}</td>
+          <td>33.0</td>
+          <td>97</td>
+          <td>220.002</td>
         </tr>
         <tr>
-          <td>{props.date}</td>
+          <td>2019-02-10 15:00:00</td>
           <td>Cloudy</td>
-          <td>{props.temperature}</td>
-          <td>{props.humidity}</td>
-          <td>{props.windspeed}</td>
+          <td>32.0</td>
+          <td>99</td>
+          <td>210.006</td>
         </tr>
         <tr>
-          <td>{props.date}</td>
+          <td>2019-02-10 17:00:00</td>
           <td>Sunny</td>
-          <td>{props.temperature}</td>
-          <td>{props.humidity}</td>
-          <td>{props.windspeed}</td>
+          <td>32.0</td>
+          <td>100</td>
+          <td>215.007</td>
         </tr>
         {/* <tr>
           <td>2</td>
