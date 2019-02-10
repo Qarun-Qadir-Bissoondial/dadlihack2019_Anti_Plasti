@@ -26,7 +26,7 @@ class About extends React.Component {
           <p style={{ textAlign: "center", padding: 10 }}>
             Anti Plasti impacts coastal communites through environmental
             awareness and weather prediction. Our project incorporates two main
-            features, Solar Powered bouys and weather prediction. We deploy
+            features, solar powered bouys and weather prediction. We deploy
             solar powered bouys, which detects and collects plastics on the sea
             surface.Our bouys are equppied with cameras which has the features
             to be live streamed as the bouys are out at sea. The other feature
@@ -36,13 +36,13 @@ class About extends React.Component {
             predictions can prepare persons who have routine activites at sea
             and persons who live near the coast to be better resilient to the
             changes in climate. This project actively engages communities
-            through environmental awareness that pollution negatively impacts
+            through environmental awareness, that pollution negatively impacts
             our oceans and everything within our greenhouse is affected. Our
             bouy's remote monitoring capability reduces risk by providing timely
             readings of plastics,sustainable energy through solar and notifies
             persons of unsafe weather reading levels. In addition, we believe
             that by our weather resilience incentive, and monitoring of
-            pollution. We are be involving communities and impacting younger
+            pollution. We are involving communities and impacting younger
             generations for a better climate and a better future.
           </p>
         </div>
