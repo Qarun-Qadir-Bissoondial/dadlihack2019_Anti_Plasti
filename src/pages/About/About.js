@@ -1,63 +1,73 @@
-import React from 'react';
+import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import Button from "@material-ui/core/Button";
 
 class About extends React.Component {
+  render() {
+    return (
+      <div>
+        <div style={{ textAlign: "center" }}>
+          <Typography variant="display1"> About Anti-Plasti </Typography>
+          <p>Solving world hunger one step at a time.</p>
+        </div>
 
-    render() {
-        return (
-            <div>
-                <div style={{textAlign: 'center'}}>
-                    <Typography variant="display1"> About Anti-Plasti </Typography>
-                    <p>
-                        Solving world hunger one step at a time.
-                    </p>
-                </div>
+        <Divider />
 
-                <Divider/>
+        <p style={{ textAlign: "center", marginTop: 10 }}>
+          <img
+            src="/img/1.jpg"
+            className="z-depth-1 img-fluid"
+            alt="Sample avatar"
+          />
+        </p>
 
-                <p style={{textAlign: 'center', marginTop: 10}}>
-                    <img src="/img/1.jpg" className="z-depth-1 img-fluid" alt="Sample avatar"/>
-                </p>
+        <div>
+          <p style={{ textAlign: "center", padding: 10 }}>
+            Anti Plasti impacts coastal communites through environmental
+            awareness and weather prediction. Our project incorporates two main
+            features, Solar Powered bouys and weather prediction. We deploy
+            solar powered bouys, which detects and collects plastics on the sea
+            surface.Our bouys are equppied with cameras which has the features
+            to be live streamed as the bouys are out at sea. The other feature
+            is weather that can be predicted days in advance which gives
+            precautions for given activites, and in some cases residents. This
+            information is available online and is updated in realtime. The
+            predictions can prepare persons who have routine activites at sea
+            and persons who live near the coast to be better resilient to the
+            changes in climate. This project actively engages communities
+            through environmental awareness that pollution negatively impacts
+            our oceans and everything within our greenhouse is affected. Our
+            bouy's remote monitoring capability reduces risk by providing timely
+            readings of plastics,sustainable energy through solar and notifies
+            persons of unsafe weather reading levels. In addition, we believe
+            that by our weather resilience incentive, and monitoring of
+            pollution. We are be involving communities and impacting younger
+            generations for a better climate and a better future.
+          </p>
+        </div>
 
-                <div>
-                    <p style={{textAlign: 'center', padding: 10}}>
-                        Anti Plasti benefits people wishing to break into hydroponics with little to no prior knowledge
-                        and with a low cost of entry. It’s remote monitoring capability reduces risk by providing
-                        timely readings on their farm and notifies them if it has reached unsafe levels,
-                        compensating for a farmer’s poor education in the field while allowing them to divert their
-                        time on other tasks, such as marketing. In addition, we believe the PiDronics system is an
-                        important educational tool to introduce young people into the world of agriculture in an
-                        engaging environment, since it encapsulates the fields of agriculture, programming and the
-                        ever-popular Raspberry Pi. The PiDronics system integrates seamlessly with a hydroponics farm,
-                        and the modularity of the system allows various sensors to be integrated and viewable on
-                        the app.
-                    </p>
-                </div>
+        <Divider />
 
-                <Divider/>
+        <div style={{ textAlign: "center", marginTop: 10 }}>
+          <Typography variant="display1"> We need your help!</Typography>
+          <p>
+            Removing plastics in the ocean is a really difficult task and the
+            world needs all the help it can get. But we need your help too! This
+            application needs to be actively maintained so we can continue to
+            detect and remove plastics in the ocean.
+          </p>
 
-                <div style={{textAlign: 'center', marginTop: 10}}>
-                    <Typography variant="display1"> We need your help!</Typography>
-                    <p>
-                        Removing plastics in the ocean is a really difficult task and the world needs all the help it
-                        can get. But we need your help too! This application needs to be actively maintained so we can
-                        continue to detect and remove plastics in the ocean.
-                    </p>
+          <p>
+            If you're interested, check out the link below to take a look at our
+            code on Github. Help us to help make the world a better place :D
+          </p>
 
-                    <p>
-                        If you're interested, check out the link below to take a look at our code on Github. Help us to
-                        help make the world a better place :D
-                    </p>
-
-                    <Button>
-                        Check out our code here :D
-                    </Button>
-                </div>
-            </div>
-        );
-    }
+          <Button>Check out our code here :D</Button>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default About;
