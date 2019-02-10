@@ -58,7 +58,7 @@ class ModalInfo extends React.Component {
                     <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
                         <MDBModalHeader toggle={this.toggle}>5 Day Weather Forecast</MDBModalHeader>
                         <MDBModalBody>
-                            <Table
+                            <Table className="responsive-table"
                                 // date={this.state.date}
                                 // description={this.state.description}
                                 // temperature={this.state.temperature}
