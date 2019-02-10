@@ -2,7 +2,6 @@ import React from 'react';
 import Button from "../button"
 import Table from "../Table"
 import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
-
 // import FirebaseInstance from "../Firebase/Firebase";
 
 const weatherAPIkey = "5e8a3f47b6ba4a57126eec42c7f9ef6c";
@@ -35,12 +34,6 @@ class ModalInfo extends React.Component {
         });
       }
 
-    // Sample request:
-// https://api.openweathermap.org/data/2.5/forecast?lat=35&lon=139&appid=5e8a3f47b6ba4a57126eec42c7f9ef6c
-// https://api.openweathermap.org/data/2.5/forecast?lat=LATITUDE_OF_BUOY&lon=LONGITUDE_OF_BUOY&appid=APP_ID
-
-// const weather_request = "https://api.openweathermap.org/data/2.5/forecast?lat=" + LATITUDE + "&lon=" + LONGITUDE + "&appid=" + weatherAPIkey;
-
     getweather = async (e) =>{
         e.preventDefault();
         const api_call = await fetch("http://api.openweathermap.org/data/2.5/forecast?lat=" + tt_lat + "&lon=" + tt_long + "&appid=" + weatherAPIkey + "&units=metric");
@@ -55,26 +48,24 @@ class ModalInfo extends React.Component {
             windspeed: data.list[0].wind.speed,
             error: ""
         });
-        }
-        // else{
-        // this.setState({
-        //     temperature: undefined,
-        //     city: undefined,
-        //     country: undefined,
-        //     humidity: undefined,
-        //     description: undefined,
-        //     error: "No Data Available"
-        // });
-        // }
-
+    }
+    
         render(){
             return (
                 <MDBContainer>
-                    <MDBBtn onClick={this.toggle}>Modal</MDBBtn>
+
+                    {/* <MDBBtn onClick={this.submit.bind(this)}> More Info </MDBBtn> */}
+                    <div onClick={this.getweather}>
+
+                    {/* {this.getweather} */}
+
+                    <MDBBtn onClick={this.toggle}> More Info</MDBBtn>
+                    {/* {this.getweather} */}
                     <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
-                        <MDBModalHeader toggle={this.toggle}>MDBModal title</MDBModalHeader>
+                        <MDBModalHeader toggle={this.toggle}>Weather Forecast for the next 5 Days</MDBModalHeader>
+                        {/* {this.getweather()} */}
                         <MDBModalBody>
-                            <Button getweather={this.getweather}/> 
+                            {/* <Button getweather={this.getweather}/>  */}
                             <Table
                                 date={this.state.date}
                                 description={this.state.description}
@@ -86,26 +77,12 @@ class ModalInfo extends React.Component {
                         </MDBModalBody>
                         <MDBModalFooter>
                         <MDBBtn color="secondary" onClick={this.toggle}>Close</MDBBtn>
-                        <MDBBtn color="primary">Save changes</MDBBtn>
                         </MDBModalFooter>
                     </MDBModal>
+                    </div>
+                    
                     </MDBContainer>
-
-                // <div className="d-flex justify-content-around">
-                //     <Button id = "toggleBtn" color="info" onClick={this.toggle}>Weather</Button>
-
-                //     <Button getweather={this.getweather}/> 
-                //     <Table
-                //         date={this.state.date}
-                //         description={this.state.description}
-                //         temperature={this.state.temperature}
-                //         humidity={this.state.humidity}
-                //         windspeed={this.state.windspeed}
-                //         error={this.state.error}
-                //     />
-                // </div>
-                
-                       
+                    
 
             );
         }

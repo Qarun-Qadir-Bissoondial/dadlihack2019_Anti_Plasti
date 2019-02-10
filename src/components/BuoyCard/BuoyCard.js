@@ -65,7 +65,7 @@ class BuoyCard extends React.Component {
 
                 </CardContent>
                 <CardActions style={{justifyContent: 'center'}}>
-                    {/* <Button id = "toggleBtn" color="info" onClick={this.toggle}>Learn More</Button> */}
+                
                     <Button size="small">Learn More</Button>
                 </CardActions>
 
