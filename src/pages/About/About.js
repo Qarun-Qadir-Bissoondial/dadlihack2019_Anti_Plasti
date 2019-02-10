@@ -23,16 +23,11 @@ class About extends React.Component {
 
                 <div>
                     <p style={{textAlign: 'center', padding: 10}}>
-                        Anti Plasti benefits people wishing to break into hydroponics with little to no prior knowledge
-                        and with a low cost of entry. It’s remote monitoring capability reduces risk by providing
-                        timely readings on their farm and notifies them if it has reached unsafe levels,
-                        compensating for a farmer’s poor education in the field while allowing them to divert their
-                        time on other tasks, such as marketing. In addition, we believe the PiDronics system is an
-                        important educational tool to introduce young people into the world of agriculture in an
-                        engaging environment, since it encapsulates the fields of agriculture, programming and the
-                        ever-popular Raspberry Pi. The PiDronics system integrates seamlessly with a hydroponics farm,
-                        and the modularity of the system allows various sensors to be integrated and viewable on
-                        the app.
+                        Anti Plasti benefits tourists, who are looking to vacation in these Caribbean islands and not be affected by pollution and bad weather, fishermen, looking for prime weather and an effective catch and marine life.
+
+                        The economy and society as a whole. Fishermen with nets containing more fish than garbage, and beaches unmarred by litter provide a boon to a country's finances through the fishing and tourism industry. Furthermore, citizens feel greater pride and overall satisfaction by this potential reduction in waste.
+
+                        We aim to have an all-in-one cloud web app solution that detects plastics out in the ocean which will lead to the eradication of plastics, as well as weather forecasting to warn citizens of upcoming storms, hurricanes and bad weather. 
                     </p>
                 </div>
 
