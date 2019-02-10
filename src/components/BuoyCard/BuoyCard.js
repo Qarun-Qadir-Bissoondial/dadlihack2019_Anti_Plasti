@@ -20,19 +20,6 @@ class BuoyCard extends React.Component {
 
     constructor(props) {
         super(props);
-        
-        // this.state = {
-        //     modal: {
-        //         modal: false,
-        //         // title: props.title,
-        //         date: undefined,
-        //         description: undefined,
-        //         temperature: undefined,
-        //         humidity: undefined,
-        //         windspeed: undefined,
-        //         error: undefined,
-        //     }
-        // }
     }
 
     render(){
