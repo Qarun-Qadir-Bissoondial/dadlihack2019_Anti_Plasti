@@ -33,6 +33,8 @@ class SimpleHereMap extends React.Component {
         this.platform = null;
         this.map = null;
 
+
+
         this.state = {
             app_id: appID,
             app_code: appCode,
@@ -48,7 +50,9 @@ class SimpleHereMap extends React.Component {
                 title: 'Buoy Title',
                 lat: 10.1234,
                 long: -61.1234,
-            }
+                result: ""
+            },
+            buoy_mapping: {}
         }
     }
 
@@ -91,45 +95,35 @@ class SimpleHereMap extends React.Component {
         // 3. Create a mapping between the Buoy Object and the marker that was created for it
         // (continued on the group.addEventListener function)
 
-        const marker_n = new window.H.map.Marker({lat: 10.81, lng: -61.3339669}, {icon: marker_icon});
-        const marker_s = new window.H.map.Marker({lat: 10.0, lng: -61.3339669}, {icon: marker_icon});
-        const marker_w = new window.H.map.Marker({lat: 10.4398967, lng: -61.5339669}, {icon: marker_icon});
-        const marker_e = new window.H.map.Marker({lat: 10.4398967, lng: -60.9739669}, {icon: marker_icon});
+        this.app.get_db().ref('/dummy').once('value').then((snap) => {
+            const all_buoys = snap.val();
+            Object.keys(snap.val()).forEach(buoy => {
+                const key =  all_buoys[buoy].lat.toString() + all_buoys[buoy].lng.toString();
+                console.log(key);
+                console.log(all_buoys[buoy]);
 
-        group.addObject(marker_n);
-        group.addObject(marker_s);
-        group.addObject(marker_e);
-        group.addObject(marker_w);
+                const marker = new window.H.map.Marker({lat: all_buoys[buoy].lat, lng: all_buoys[buoy].lng}, {icon: marker_icon});
+                group.addObject(marker);
+
+                this.state.buoy_mapping[key] = all_buoys[buoy];
+                console.log(this.state.buoy_mapping);
+            });
+        });
 
         this.map.addObject(group);
 
-        // this.app.get_db().ref('dummy/B-E-001').set({
-        //     buoy_id: 'B-E-001',
-        //     lat: 10.4398967, lng: -60.9739669,
-        //     image_link: "none-yet"
-        // }).then(() => {
-        //     console.log('written');
-        // });
-
-        // "buoy_id": {
-        //     "buoy_id": "B-001",
-        //         "lat": 10.000,
-        //         "long": 10.000,
-        //         "pH": 7,
-        //         "alt": 1,
-        //         "image_link": "Link for firebase storage bucket"
-        // }
 
         group.addEventListener('tap', (event) => {
-            console.log(event.target); // event.target is the marker that was clicked on
+            console.log(event.target);
+            const key = event.target.b.lat.toString() + event.target.b.lng.toString();
+            console.log(key);
+            console.log(this.state.buoy_mapping[key]);
+            const this_buoy = this.state.buoy_mapping[key];
+            this.state.card.title = this_buoy.buoy_id;
+            this.state.card.lat = this_buoy.lat;
+            this.state.card.long = this_buoy.lng;
+            this.state.card.result = this_buoy.current_result.plastic;
 
-            // In addition to infoPresent being set to true in the state, the card object in the state also
-            // has to be updated. The marker that is clicked on will correspond to a Buoy Object. The data
-            // from this Buoy Object will be used to set the state. This is automatically passed to the JSX below.
-
-            // 1. When a marker is clicked, use the mapping from 3 to determine which Buoy Object it corresponds to
-            // 2. Pass the Buoy Object from 4 into the card state
-            // this.setState({infoPresent: true, card: this_buoy_object});
             this.setState({infoPresent: true});
         });
 

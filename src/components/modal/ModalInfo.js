@@ -14,7 +14,8 @@ class ModalInfo extends React.Component {
 
         this.state = {
             modal: false,
-            date: new Date().toISOString().substring(0, 23),
+            // date: new Date().toISOString().substring(0, 23),
+            date: new Date().toDateString(),
             description: undefined,
             temperature: undefined,
             humidity: undefined,
@@ -54,7 +55,7 @@ class ModalInfo extends React.Component {
                     <div onClick={this.getweather}>
                     <MDBBtn onClick={this.toggle}> More Info</MDBBtn>
                     <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
-                        <MDBModalHeader toggle={this.toggle}>Weather Forecast for the next 5 Days</MDBModalHeader>
+                        <MDBModalHeader toggle={this.toggle}>5 Day Weather Forecast</MDBModalHeader>
                         <MDBModalBody>
                             <Table
                                 date={this.state.date}
