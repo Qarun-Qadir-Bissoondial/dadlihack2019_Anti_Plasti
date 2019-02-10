@@ -79,6 +79,25 @@ class Support extends React.Component {
                             </CardBody>
                         </Collapse>
                     </Card>
+
+                    <Card className=" transparent border-0 border-light">
+                    <span onClick={this.toggleCollapse('collapse123')} className=" click d-flex p-2 transparent blue-text border-bottom border-light "><h5>What is the problem we are dealing with? </h5><i className={collapseID === 'collapse123' ? 'fa fa-angle-down rotate-icon' : 'fa fa-angle-down ml-3'}></i> </span>
+                    
+                        <Collapse id="collapse123" isOpen={collapseID}>
+                            <CardBody>
+                            Due to climate change, recent weather has proven extremely vicious and unpredictable. To compound this, storms and hurricanes tend to cause massive deposits of oceanic garbage on the shores. 
+                            This garbage also poses a treat to fishermen, where it can damage their boats and fill their nets.
+                            The toll this garbage has on marine life, is terrible beyond belief.
+                            Tourists and citizens looking for a relaxing swim in our country's beaches, find it marred with disgusting refuse.
+                            Some plastics releases gases at the highest rate: low-density polyethylene (or LDPE).
+
+                            Over time, plastics give off more and more gas. Light (and to a lesser extent heat) are the primary catalysts for this gaseous release. This leads to an alarming feedback loop: as the climate changes, the planet gets hotter, the plastic gives off more methane, increasing the rate of climate change and the circle continues. 
+                            
+                            The oceans and humanity, both, would greatly benefit from a more effective way of reducing and raising awareness for the sheer scale of garbage in our beautiful seas.
+
+                            </CardBody>
+                        </Collapse>
+                    </Card>
                 </div>
 
                 <div id = "product">
