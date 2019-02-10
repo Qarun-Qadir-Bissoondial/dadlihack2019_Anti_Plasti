@@ -9,6 +9,7 @@ import IconButton from "@material-ui/core/IconButton";
 import Icon from "@material-ui/core/Icon";
 import { Switch, Route } from 'react-router-dom';
 import About from "./pages/About/About";
+import Support from "./pages/Support/Support";
 class App extends Component {
 
     state = {
@@ -47,6 +48,7 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route   path="/about" component={About} />
+                        <Route   path="/support" component={Support} />
                     </Switch>
                 </main>
 

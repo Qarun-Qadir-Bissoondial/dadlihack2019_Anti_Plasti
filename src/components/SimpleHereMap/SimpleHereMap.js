@@ -12,7 +12,7 @@ const styles = {
 
 const appID = "4aNJJLIpy51zKmIlsgGp";
 const appCode = "OHROY1ANFX6PqyGerpHdYQ";
-const weatherAPIkey = "5e8a3f47b6ba4a57126eec42c7f9ef6c";
+// const weatherAPIkey = "5e8a3f47b6ba4a57126eec42c7f9ef6c";
 // Sample request:
 // https://api.openweathermap.org/data/2.5/forecast?lat=35&lon=139&appid=5e8a3f47b6ba4a57126eec42c7f9ef6c
 // https://api.openweathermap.org/data/2.5/forecast?lat=LATITUDE_OF_BUOY&lon=LONGITUDE_OF_BUOY&appid=APP_ID
