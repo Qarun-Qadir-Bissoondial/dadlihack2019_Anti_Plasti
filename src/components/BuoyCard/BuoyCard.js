@@ -20,19 +20,6 @@ class BuoyCard extends React.Component {
 
     constructor(props) {
         super(props);
-        
-        // this.state = {
-        //     modal: {
-        //         modal: false,
-        //         // title: props.title,
-        //         date: undefined,
-        //         description: undefined,
-        //         temperature: undefined,
-        //         humidity: undefined,
-        //         windspeed: undefined,
-        //         error: undefined,
-        //     }
-        // }
     }
 
     render(){
@@ -81,7 +68,7 @@ class BuoyCard extends React.Component {
 
                 {/*<ForecastTable/>*/}
 
-                {/*<ModalInfo date={this.props.date} description={this.props.description} temperature={this.props.temperature} humidity={this.props.humidity} windspeed={this.props.windspeed}/>*/}
+                {/* <ModalInfo date={this.props.date} description={this.props.description} temperature={this.props.temperature} humidity={this.props.humidity} windspeed={this.props.windspeed}/> */}
             </Card>
 
             
