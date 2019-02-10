@@ -81,7 +81,7 @@ class BuoyCard extends React.Component {
 
                 {/*<ForecastTable/>*/}
 
-                <ModalInfo date={this.props.date} description={this.props.description} temperature={this.props.temperature} humidity={this.props.humidity} windspeed={this.props.windspeed}/>
+                {/* <ModalInfo date={this.props.date} description={this.props.description} temperature={this.props.temperature} humidity={this.props.humidity} windspeed={this.props.windspeed}/> */}
             </Card>
 
             

@@ -98,73 +98,50 @@ class Support extends React.Component {
                     </Card>
 
                     <Card className=" transparent border-0 border-light">
-                        <span onClick={this.toggleCollapse('collapse3')} className="click d-flex p-2 transparent blue-text border-bottom border-light"><h5>Can I upgrade my my setup with additional sensors?</h5>
+                        <span onClick={this.toggleCollapse('collapse3')} className="click d-flex p-2 transparent blue-text border-bottom border-light"><h5>What Exactly is Anti Plasti?</h5>
                             <i className={collapseID === 'collapse3' ? 'fa fa-angle-down rotate-icon' : 'fa fa-angle-down'}></i> 
                         </span>
                     
                         <Collapse id="collapse3" isOpen={collapseID}>
                             <CardBody>
-                                Yes, our modular design allows sensors to be added and removed with ease.
+                                All-in-one cloud web app solution that detects plastics out in the ocean which will lead to the eradication of plastics, as well as weather forecasting to warn citizens of upcoming storms, hurricanes and bad weather. 
+                                A buoy is used to house the device that will be responsible for detecting the garbage in the ocean.
                             </CardBody>
                         </Collapse>
                     </Card>
 
                     <Card className=" transparent border-0 border-light"> 
-                        <span onClick={this.toggleCollapse('collapse5')} className="click d-flex p-2 blue-text border-bottom border-light"><h5>Will I receive updates and improvements that are released? Will my Raspberry Pi also receive updates?</h5>
+                        <span onClick={this.toggleCollapse('collapse5')} className="click d-flex p-2 blue-text border-bottom border-light"><h5>What will happen to the garbage that is detected?</h5>
                             <i className={collapseID === 'collapse5' ? 'fa fa-angle-down rotate-icon' : 'fa fa-angle-down'}></i> 
                         </span>
                     
                         <Collapse id="collapse5" isOpen={collapseID}>
                             <CardBody>
-                                Yes, improvements to our database will be received live and great care has been taken to ensure updates can be made to the Raspberry Pi server without disrupting service.
+                                Once the plastics are detected, they will be removed. The removal of plastics from the ocean will be sent for recycling. This will allow less methane gases to be released upon the breakdown of plastics. 
                             </CardBody>
                         </Collapse>
                     </Card>
 
                     <Card className=" transparent border-0 border-light">
-                        <span onClick={this.toggleCollapse('collapse6')} className="click d-flex p-2 blue-text border-bottom border-light"><h5>My area is prone to power outages. How will this affect the performance of my monitoring system?</h5>
+                        <span onClick={this.toggleCollapse('collapse6')} className="click d-flex p-2 blue-text border-bottom border-light"><h5>My area is prone to power outages. How will this affect the performance of Anti Plasti?</h5>
                             <i className={collapseID === 'collapse6' ? 'fa fa-angle-down rotate-icon' : 'fa fa-angle-down'}></i> 
                         </span>
                     
                         <Collapse id="collapse6" isOpen={collapseID}>
                             <CardBody>
-                                Our system is designed to restart autonomously and resume data capture and pushing once power has been restores. However, keep in mind that a consistent internet connection is required and disruptions to internet connectivity will affect remote monitoring. Data is still captured and logged during this time.
+                                No, it is going to be solar powered with capacitors.
                             </CardBody>
                         </Collapse>
                     </Card>
 
                     <Card className=" transparent border-0 border-light">
-                        <span onClick={this.toggleCollapse('collapse7')} className="click d-flex p-2 blue-text border-bottom border-light"><h5>Am I liable for any damages to the system? </h5>
-                            <i className={collapseID === 'collapse7' ? 'fa fa-angle-down rotate-icon' : 'fa fa-angle-down'}></i> 
-                        </span>
-                    
-                        <Collapse id="collapse7" isOpen={collapseID}>
-                            <CardBody>
-                                As per the contract signed before installation, the equipment (Raspberry Pi, sensors and any relevant housing and connections) are the sole property of PiSynthesis, and are on loan as such. Any damages caused by incorrect handling, storage or negligence will incur costs for replacement and/or repairs.
-                            </CardBody>
-                        </Collapse>
-                    </Card>
-
-                    <Card className=" transparent border-0 border-light">
-                        <span onClick={this.toggleCollapse('collapse8')} className="click d-flex p-2 blue-text border-bottom border-light"><h5>What is included in my PiDronics package?</h5>
-                            <i className={collapseID === 'collapse8' ? 'fa fa-angle-down rotate-icon' : 'fa fa-angle-down'}></i> 
-                        </span>
-                    
-                        <Collapse id="collapse8" isOpen={collapseID}>
-                            <CardBody>
-                                Packages include basic, mid-tier and deluxe. The basic package assumes you already have your own sensors and simply require the Raspberry Pi server to connect to, and begin remote monitoring. The mid-tier package includes the Raspberry Pi server, two sensors and includes on-site installation. The deluxe package includes everything found in the mid-tier package, in addition to every relevant sensors to fully monitor and analyse your farm. Every package allows access to our mobile and web app as well as onsite installation.
-                            </CardBody>
-                        </Collapse>
-                    </Card>
-
-                    <Card className=" transparent border-0 border-light">
-                        <span onClick={this.toggleCollapse('collapse9')} className="click d-flex p-2 blue-text border-bottom border-light"><h5>I don't know how to use my system or how to install it.</h5>
+                        <span onClick={this.toggleCollapse('collapse9')} className="click d-flex p-2 blue-text border-bottom border-light"><h5>How is this system installed?</h5>
                             <i className={collapseID === 'collapse9' ? 'fa fa-angle-down rotate-icon' : 'fa fa-angle-down'}></i> 
                         </span>
                     
                         <Collapse id="collapse9" isOpen={collapseID}>
                             <CardBody>
-                                No need to worry, on-site installation and training is available for free with the mid-tier and above packages. The basic package will be subject to additional fees for these services.
+                                The raspberry pis with the cameras would already be trained via an image recogntion model on the cloud. This Pi will be placed inside a buoy and will be solar powered with capacitors. The data will be sent live to the Anti Plasti App.
                             </CardBody>
                         </Collapse>
                     </Card>
