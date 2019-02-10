@@ -51,13 +51,109 @@ class About extends React.Component {
                     <ul className="list-unstyled mb-0">
 
                     <MDBBtn outline floating size="lg" color="white" className="z-depth-1" >
-                    <a href="https://github.com/PiDronics" target="_blank" rel="noopener noreferrer" className="p-2 fa-lg">
+                    <a href="https://github.com/antiplasti" target="_blank" rel="noopener noreferrer" className="p-2 fa-lg">
                         See our Code <MDBIcon icon="github" className="blue-text" />
                     </a>
                     </MDBBtn>
                     </ul>
                 </CardBody>
             </Card>
+
+            {/* About The Team */}
+        <Card className="my-5 px-5 pb-5 text-center">
+          <CardBody>
+            <h2 className="h1-responsive font-weight-bold my-5">
+              Meet the Team
+            </h2>
+            <p className="grey-text w-responsive mx-auto mb-5">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
+              error amet numquam iure provident voluptate esse quasi, veritatis
+              totam voluptas nostrum quisquam eum porro a pariatur veniam.
+            </p>
+            <Row>
+              <Col lg="3" md="6" className="mb-lg-0 mb-5">
+                <img
+                  src="/img/t1.jpeg"
+                  className="rounded-circle z-depth-1 img-fluid"
+                  alt="Sample avatar"
+                />
+                <h5 className="font-weight-bold mt-4 mb-3">Michael Ali</h5>
+                <p className="text-uppercase blue-text">Software and Hardware Engineer</p>
+                <p className="grey-text">
+                </p>
+                <ul className="list-unstyled mb-0">
+
+                <MDBBtn outline size="sm" color="white" className="rounded-circle z-depth-1" >
+                <a href="https://github.com/irontarkus95" target="_blank" rel="noopener noreferrer" className="p-2 fa-lg">
+                    <MDBIcon icon="github" className="blue-text" size="3x" />
+                  </a>
+                </MDBBtn>
+                </ul>
+              </Col>
+
+              <Col lg="3" md="6" className="mb-lg-0 mb-5">
+                <img
+                  src="/img/kristan.jpg"
+                  className="rounded-circle z-depth-1 img-fluid"
+                  alt="Sample avatar"
+                />
+                <h5 className="font-weight-bold mt-4 mb-3">Kristan Birbalsingh</h5>
+                <p className="text-uppercase blue-text">Software Developer and Designer</p>
+                <p className="grey-text">
+                </p>
+                <ul className="list-unstyled mb-0">
+                <MDBBtn  outline size="sm" color="white" className="rounded-circle z-depth-1" >
+                <a href="https://github.com/KCB4Rockstar" target="_blank" rel="noopener noreferrer" className="p-2 fa-lg">
+                    <MDBIcon icon="github" className="blue-text" size="3x"  />
+                  </a>
+                </MDBBtn>
+                </ul>
+              </Col>
+
+              <Col lg="3" md="6" className="mb-lg-0 mb-5">
+                <img
+                  src="/img/qarun.jpg"
+                  className="rounded-circle z-depth-1 img-fluid"
+                  alt="Sample avatar"
+                />
+                <h5 className="font-weight-bold mt-4 mb-3">Qarun Bissoondial</h5>
+                <p className="text-uppercase blue-text">Software Developer and Tester</p>
+                <p className="grey-text">
+                </p>
+                <ul className="list-unstyled mb-0">
+
+                <MDBBtn outline size="sm" color="white" className="rounded-circle z-depth-1" >
+                <a href="https://github.com/Qarun-Qadir-Bissoondial" target="_blank" rel="noopener noreferrer" className="p-2 fa-lg">
+                    <MDBIcon icon="github" className="blue-text" size="3x"  />
+                  </a>
+                </MDBBtn>
+                </ul>
+              </Col>
+
+              <Col lg="3" md="6" className="mb-lg-0 mb-5">
+                <img
+                  src="/img/t2.jpeg"
+                  className="rounded-circle z-depth-1 img-fluid"
+                  alt="Sample avatar"
+                />
+                <h5 className="font-weight-bold mt-4 mb-3">Gabriela Sewdhan</h5>
+                <p className="text-uppercase blue-text">Software and Hardware Engineer</p>
+                <p className="grey-text">
+                </p>
+                <ul className="list-unstyled mb-0">
+
+                <MDBBtn outline size="sm" color="white" className="rounded-circle z-depth-1">
+                  <a href="https://github.com/princesszelda94" target="_blank" rel="noopener noreferrer" className="p-2 fa-lg">
+                    <MDBIcon icon="github" className="blue-text" size="3x"  />
+                  </a>
+                  </MDBBtn>
+
+                </ul>
+              </Col>
+            </Row>
+          </CardBody>
+        </Card>
+        
         </Container>
         </div>
         );
