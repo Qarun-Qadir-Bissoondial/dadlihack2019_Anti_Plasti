@@ -24,7 +24,7 @@ class ModalInfo extends React.Component {
             // successMsg: "",
         };
 
-        this.getweather = this.getweather.bind(this);
+        // this.getweather = this.getweather.bind(this);
     }
 
     toggle = () => {
@@ -33,37 +33,38 @@ class ModalInfo extends React.Component {
         });
       }
 
-    getweather = async (e) =>{
-        e.preventDefault();
-        const api_call = await fetch("http://api.openweathermap.org/data/2.5/forecast?lat=" + tt_lat + "&lon=" + tt_long + "&appid=" + weatherAPIkey + "&units=metric");
-        const data = await api_call.json();
-        console.log(data);
+    // getweather = async (e) =>{
+    //     e.preventDefault();
+    //     const api_call = await fetch("http://api.openweathermap.org/data/2.5/forecast?lat=" + tt_lat + "&lon=" + tt_long + "&appid=" + weatherAPIkey + "&units=metric");
+    //     const data = await api_call.json();
+    //     console.log(data);
 
-        this.setState({
-            date: data.list[0].dt_txt,
-            description: data.list[0].weather[0].description,
-            temperature: data.list[0].main.temp,
-            humidity: data.list[0].main.humidity,
-            windspeed: data.list[0].wind.speed,
-            error: ""
-        });
-    }
+    //     this.setState({
+    //         date: data.list[0].dt_txt,
+    //         description: data.list[0].weather[0].description,
+    //         temperature: data.list[0].main.temp,
+    //         humidity: data.list[0].main.humidity,
+    //         windspeed: data.list[0].wind.speed,
+    //         error: ""
+    //     });
+    // }
     
         render(){
             return (
+                <div className="container-fluid">
                 <MDBContainer>
                     <div onClick={this.getweather}>
                     <MDBBtn onClick={this.toggle}> More Info</MDBBtn>
                     <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
                         <MDBModalHeader toggle={this.toggle}>5 Day Weather Forecast</MDBModalHeader>
                         <MDBModalBody>
-                            <Table
-                                date={this.state.date}
-                                description={this.state.description}
-                                temperature={this.state.temperature}
-                                humidity={this.state.humidity}
-                                windspeed={this.state.windspeed}
-                                error={this.state.error}
+                            <Table className="responsive-table"
+                                // date={this.state.date}
+                                // description={this.state.description}
+                                // temperature={this.state.temperature}
+                                // humidity={this.state.humidity}
+                                // windspeed={this.state.windspeed}
+                                // error={this.state.error}
                             />
                         </MDBModalBody>
                         <MDBModalFooter>
@@ -73,6 +74,7 @@ class ModalInfo extends React.Component {
                     </div>
                     
                     </MDBContainer>
+                    </div>
             );
         }
       };
